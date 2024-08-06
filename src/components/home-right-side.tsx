@@ -44,7 +44,7 @@ const projects = [
     },
     link2: {
       name: "Website",
-      url: "https://nekomics-app.web.app/",
+      url: "https://nekomics-5fa59.web.app/",
     },
   },
   {
