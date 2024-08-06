@@ -86,9 +86,14 @@ export default function HomeRightSide() {
           <Button size="custom" variant="custom" onClick={useModal.onOpen}>
             Contact Me
           </Button>
-          <Button size="custom" variant="custom">
-            Download CV
-          </Button>
+          <a
+            href="https://drive.google.com/file/d/13OPg8P_tFRNaiHKGI-t3U6iBy59epwwt/view?usp=sharing"
+            target="_blank"
+          >
+            <Button size="custom" variant="custom">
+              Download CV
+            </Button>
+          </a>
         </div>
       </div>
       <div className="flex flex-col gap-4">
