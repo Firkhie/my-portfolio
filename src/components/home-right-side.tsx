@@ -48,6 +48,20 @@ const projects = [
     },
   },
   {
+    image: "/snack-whiz.png",
+    name: "SnackWhiz",
+    description:
+      "AI-Powered Snack Recipe Generator, automatically generates a new snack recipe every week",
+    link1: {
+      name: "Github",
+      url: "https://github.com/Firkhie/snack-whiz",
+    },
+    link2: {
+      name: "Website",
+      url: "https://snack-whiz.vercel.app/",
+    },
+  },
+  {
     image: "/pokedex.png",
     name: "Pokedex",
     description:
