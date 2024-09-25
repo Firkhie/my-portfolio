@@ -62,6 +62,20 @@ const projects = [
     },
   },
   {
+    image: "/repo-explorer.png",
+    name: "RepoExplorer",
+    description:
+      "A GitHub repository search tool powered by the GitHub REST API",
+    link1: {
+      name: "Github",
+      url: "https://github.com/Firkhie/repo-explorer",
+    },
+    link2: {
+      name: "Website",
+      url: "https://repo-explorer-navy.vercel.app/",
+    },
+  },
+  {
     image: "/pokedex.png",
     name: "Pokedex",
     description:
@@ -149,24 +163,29 @@ export default function HomeRightSide() {
           />
         ))}
       </div>
-      <p className="text-center text-xs text-zinc-500">
-        Design inspired by{" "}
-        <a
-          href="https://dribbble.com/syahrulfalah"
-          target="_blank"
-          className="text-zinc-400"
-        >
-          Syahrul Falah
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://dribbble.com/NicolasMzrd"
-          target="_blank"
-          className="text-zinc-400"
-        >
-          Nicolas Meuzard
-        </a>
-      </p>
+      <div className="space-y-2">
+        <p className="text-center text-xs text-zinc-500">
+          Design inspired by{" "}
+          <a
+            href="https://dribbble.com/syahrulfalah"
+            target="_blank"
+            className="text-zinc-400"
+          >
+            Syahrul Falah
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://dribbble.com/NicolasMzrd"
+            target="_blank"
+            className="text-zinc-400"
+          >
+            Nicolas Meuzard
+          </a>
+        </p>
+        <p className="text-center text-xs text-zinc-500">
+          © 2024 Firdig Alfalakhi. All Rights Reserved.
+        </p>
+      </div>
     </div>
   );
 }
