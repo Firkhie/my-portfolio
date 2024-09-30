@@ -1,18 +1,18 @@
 import Image from "next/image";
 
-interface WorkCardProps {
+interface JobCardProps {
   image: string;
   position: string;
   place: string;
   period: string;
 }
 
-export default function WorkCard({
+export default function JobCard({
   image,
   position,
   place,
   period,
-}: WorkCardProps) {
+}: JobCardProps) {
   return (
     <div className="flex w-full items-center justify-between rounded-md bg-[#202022] p-4 sm:p-5">
       <div className="flex items-center gap-x-7">

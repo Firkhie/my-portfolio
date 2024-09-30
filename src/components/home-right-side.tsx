@@ -2,94 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./project-card";
-import WorkCard from "./work-card";
+import JobCard from "./job-card";
 import ContactDialog from "./contact-dialog";
 import { useModalStore } from "@/hooks/use-modal-store";
 import { useEffect, useState } from "react";
 import ScrollObserver from "./scroll-observer";
 import { useObserverStore } from "@/hooks/use-observer-store";
 
-const works = [
-  {
-    image: "/feedloop.jpeg",
-    position: "Fullstack Engineer",
-    place: "Feedloop AI",
-    period: "Sep 2023 - Mar 2024",
-  },
-];
-
-const projects = [
-  {
-    image: "/vox-ai.png",
-    name: "VoxAI",
-    description:
-      "A SaaS AI platform offering conversation, code, music, image, and video generation, with subscription features.",
-    link1: {
-      name: "Github",
-      url: "https://github.com/Firkhie/vox-ai",
-    },
-    link2: {
-      name: "Website",
-      url: "https://vox-ai-pi.vercel.app/",
-    },
-  },
-  {
-    image: "/nekomics.png",
-    name: "Nekomics",
-    description:
-      "Responsive web based application for comics reading website by using Mangadex API",
-    link1: {
-      name: "Github",
-      url: "https://github.com/Firkhie/nekomics-app",
-    },
-    link2: {
-      name: "Website",
-      url: "https://nekomics-app.web.app/",
-    },
-  },
-  {
-    image: "/snack-whiz.png",
-    name: "SnackWhiz",
-    description:
-      "AI-Powered Snack Recipe Generator, automatically generates a new snack recipe every week",
-    link1: {
-      name: "Github",
-      url: "https://github.com/Firkhie/snack-whiz",
-    },
-    link2: {
-      name: "Website",
-      url: "https://snack-whiz.vercel.app/",
-    },
-  },
-  {
-    image: "/repo-explorer.png",
-    name: "RepoExplorer",
-    description:
-      "A GitHub repository search tool powered by the GitHub REST API",
-    link1: {
-      name: "Github",
-      url: "https://github.com/Firkhie/repo-explorer",
-    },
-    link2: {
-      name: "Website",
-      url: "https://repo-explorer-navy.vercel.app/",
-    },
-  },
-  {
-    image: "/pokedex.png",
-    name: "Pokedex",
-    description:
-      "Comprehensive and interactive encyclopedia of Pokémon using PokeAPI",
-    link1: {
-      name: "Github",
-      url: "https://github.com/Firkhie/pokedex",
-    },
-    link2: {
-      name: "Website",
-      url: "https://pokedex-omega-woad.vercel.app/",
-    },
-  },
-];
+import jobs from "@/data/jobs.json";
+import projects from "@/data/projects.json";
 
 export default function HomeRightSide() {
   const useModal = useModalStore();
@@ -139,13 +60,13 @@ export default function HomeRightSide() {
       <div className="flex flex-col gap-4">
         <hr className="border-zinc-500" />
         <h2 className="text-lg font-semibold sm:text-xl">Working Experience</h2>
-        {works.map((work) => (
-          <WorkCard
-            key={work.place}
-            image={work.image}
-            position={work.position}
-            place={work.place}
-            period={work.period}
+        {jobs.map((job) => (
+          <JobCard
+            key={job.place}
+            image={job.image}
+            position={job.position}
+            place={job.place}
+            period={job.period}
           />
         ))}
       </div>

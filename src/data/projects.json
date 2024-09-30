@@ -1,0 +1,67 @@
+[
+  {
+    "image": "/vox-ai.png",
+    "name": "VoxAI",
+    "description": "A SaaS AI platform offering conversation, code, music, image, and video generation, with subscription features.",
+    "link1": {
+      "name": "Github",
+      "url": "https://github.com/Firkhie/vox-ai"
+    },
+    "link2": {
+      "name": "Website",
+      "url": "https://vox-ai-pi.vercel.app/"
+    }
+  },
+  {
+    "image": "/nekomics.png",
+    "name": "Nekomics",
+    "description": "Responsive web based application for comics reading website by using Mangadex API",
+    "link1": {
+      "name": "Github",
+      "url": "https://github.com/Firkhie/nekomics-app"
+    },
+    "link2": {
+      "name": "Website",
+      "url": "https://nekomics-app.web.app/"
+    }
+  },
+  {
+    "image": "/snack-whiz.png",
+    "name": "SnackWhiz",
+    "description": "AI-Powered Snack Recipe Generator, automatically generates a new snack recipe every week",
+    "link1": {
+      "name": "Github",
+      "url": "https://github.com/Firkhie/snack-whiz"
+    },
+    "link2": {
+      "name": "Website",
+      "url": "https://snack-whiz.vercel.app/"
+    }
+  },
+  {
+    "image": "/repo-explorer.png",
+    "name": "RepoExplorer",
+    "description": "A GitHub repository search tool powered by the GitHub REST API",
+    "link1": {
+      "name": "Github",
+      "url": "https://github.com/Firkhie/repo-explorer"
+    },
+    "link2": {
+      "name": "Website",
+      "url": "https://repo-explorer-navy.vercel.app/"
+    }
+  },
+  {
+    "image": "/pokedex.png",
+    "name": "Pokedex",
+    "description": "Comprehensive and interactive encyclopedia of Pokémon using PokeAPI",
+    "link1": {
+      "name": "Github",
+      "url": "https://github.com/Firkhie/pokedex"
+    },
+    "link2": {
+      "name": "Website",
+      "url": "https://pokedex-omega-woad.vercel.app/"
+    }
+  }
+]
