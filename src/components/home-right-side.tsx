@@ -47,18 +47,6 @@ export default function HomeRightSide() {
       </div>
       <div className="flex flex-col gap-4">
         <hr className="border-zinc-500" />
-        <h2 className="text-lg font-semibold sm:text-xl">About Me</h2>
-        <p className="text-sm font-light text-zinc-300 lg:text-base">
-          I&apos;m a Fullstack Engineer with basic skills in frontend
-          technologies like React, Vue, and Next.js. On the backend, I am
-          proficient in technologies such as Node.js, TypeScript, Express, etc.
-          I also have experience with AI technologies, having worked as a
-          Fullstack Engineer primarily on the backend, focusing on AI agent
-          training and AI prompting at a Gen-AI platform startup in Indonesia.
-        </p>
-      </div>
-      <div className="flex flex-col gap-4">
-        <hr className="border-zinc-500" />
         <h2 className="text-lg font-semibold sm:text-xl">Working Experience</h2>
         {jobs.map((job) => (
           <JobCard

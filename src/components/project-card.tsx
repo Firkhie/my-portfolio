@@ -25,7 +25,12 @@ export default function ProjectCard({
   return (
     <div className="flex h-[350px] w-full flex-col gap-y-2 rounded-md bg-[#202022] p-4 sm:h-[400px] sm:px-6 sm:py-5">
       <div className="relative h-full w-full overflow-hidden rounded-md">
-        <Image alt="Image" src={image} layout="fill" objectFit="cover" />
+        <Image
+          alt="Image"
+          src={image}
+          fill
+          className="object-cover object-top"
+        />
       </div>
       <h3 className="mt-2 text-sm font-semibold sm:mt-4 sm:text-base">
         {name}
