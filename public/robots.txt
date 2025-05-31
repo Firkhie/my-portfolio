@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alfalakhi.catco.uno/
+
+# Sitemaps
+Sitemap: https://alfalakhi.catco.uno/sitemap.xml
