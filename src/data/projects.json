@@ -1,41 +1,47 @@
 [
   {
+    "image": "/anistream.png",
+    "name": "Anistream",
+    "description": "Anime streaming website powered by Consumet API, offering a seamless viewing experience and a wide selection of titles.",
+    "links": [
+      {
+        "name": "Github",
+        "url": ""
+      },
+      {
+        "name": "Website",
+        "url": "https://anistream.catco.uno/"
+      }
+    ]
+  },
+  {
     "image": "/overture-ai.png",
     "name": "OvertureAI",
     "description": "A SaaS AI platform offering conversation, code, music, image, and video generation, with subscription features.",
-    "link1": {
-      "name": "Github",
-      "url": "https://github.com/Firkhie/overture-ai"
-    },
-    "link2": {
-      "name": "Website",
-      "url": "https://overtureai.catco.uno/"
-    }
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Firkhie/overture-ai"
+      },
+      {
+        "name": "Website",
+        "url": "https://overtureai.catco.uno/"
+      }
+    ]
   },
   {
-    "image": "/nekomics.png",
-    "name": "Nekomics",
-    "description": "Responsive web based application for comics reading website by using Mangadex API",
-    "link1": {
-      "name": "Github",
-      "url": "https://github.com/Firkhie/nekomics-app"
-    },
-    "link2": {
-      "name": "Website",
-      "url": "https://nekomics-app.web.app/"
-    }
-  },
-  {
-    "image": "/repo-explorer.png",
-    "name": "RepoExplorer",
-    "description": "A GitHub repository search tool powered by the GitHub REST API",
-    "link1": {
-      "name": "Github",
-      "url": "https://github.com/Firkhie/repo-explorer"
-    },
-    "link2": {
-      "name": "Website",
-      "url": "https://repo-explorer-navy.vercel.app/"
-    }
+    "image": "/snack-whiz.png",
+    "name": "SnackWhiz",
+    "description": "AI-powered website that automatically generates and updates unique snack recipes daily using AI.",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Firkhie/snack-whiz.git"
+      },
+      {
+        "name": "Website",
+        "url": "https://snackwhiz.catco.uno/"
+      }
+    ]
   }
 ]

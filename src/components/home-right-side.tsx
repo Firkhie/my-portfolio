@@ -28,7 +28,7 @@ export default function HomeRightSide() {
       <ScrollObserver onChange={setCurrentHeading} />
       <div className="flex flex-col gap-4 sm:gap-7">
         <h1 className="text-2xl font-extralight sm:text-4xl">
-          Passionate about building apps and websites
+          Open for collaboration and new opportunities
         </h1>
         <div className="flex gap-x-3">
           <ContactDialog />
@@ -67,8 +67,7 @@ export default function HomeRightSide() {
             name={project.name}
             description={project.description}
             image={project.image}
-            link1={project.link1!}
-            link2={project.link2!}
+            links={project.links}
           />
         ))}
       </div>
