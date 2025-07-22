@@ -33,7 +33,9 @@ export default function ProjectCard({
       <p className="text-xs text-zinc-400 sm:text-sm">{description}</p>
       <div className="flex gap-x-3">
         {links &&
-          links.map((link) => <RedirectLink name={link.name} url={link.url} />)}
+          links.map((link, index) => (
+            <RedirectLink key={index} name={link.name} url={link.url} />
+          ))}
       </div>
     </div>
   );
