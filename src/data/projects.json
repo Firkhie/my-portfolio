@@ -2,7 +2,7 @@
   {
     "image": "/anistream.png",
     "name": "Anistream",
-    "description": "Anime streaming website powered by Consumet API, offering a seamless viewing experience and a wide selection of titles.",
+    "description": "Anime streaming website featuring a modern interface and a wide selection of titles for all anime fans.",
     "links": [
       {
         "name": "Github",
@@ -32,7 +32,7 @@
   {
     "image": "/snack-whiz.png",
     "name": "SnackWhiz",
-    "description": "AI-powered website that automatically generates and updates unique snack recipes daily using AI.",
+    "description": "AI-powered website that automatically generates and updates unique snack recipes weekly.",
     "links": [
       {
         "name": "Github",
