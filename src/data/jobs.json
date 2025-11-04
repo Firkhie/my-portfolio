@@ -3,12 +3,14 @@
     "image": "/antara.jpeg",
     "position": "Software Engineer",
     "place": "Antara Systems",
-    "period": "Oct 2024 - Present"
+    "period": "Oct 2024 - Present",
+    "link": "https://www.antarasystems.com/"
   },
   {
     "image": "/feedloop.jpeg",
     "position": "Fullstack Engineer",
     "place": "Feedloop AI",
-    "period": "Sep 2023 - Mar 2024"
+    "period": "Sep 2023 - Mar 2024",
+    "link": "https://feedloop.ai/"
   }
 ]

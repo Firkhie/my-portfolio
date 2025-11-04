@@ -51,10 +51,7 @@ export default function HomeRightSide() {
         {jobs.map((job) => (
           <JobCard
             key={job.place}
-            image={job.image}
-            position={job.position}
-            place={job.place}
-            period={job.period}
+            data={job}
           />
         ))}
       </div>
