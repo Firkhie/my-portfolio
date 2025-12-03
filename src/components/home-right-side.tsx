@@ -36,7 +36,7 @@ export default function HomeRightSide() {
             Contact Me
           </Button>
           <a
-            href="https://drive.google.com/file/d/13OPg8P_tFRNaiHKGI-t3U6iBy59epwwt/view?usp=sharing"
+            href="https://drive.google.com/file/d/1HOxWB6UIrA2ZJy3YVgImINlVSW_36RBW/view?usp=sharing"
             target="_blank"
           >
             <Button size="custom" variant="custom">
