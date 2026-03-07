@@ -61,18 +61,17 @@ export default function ContactDialog() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    toast.success("Message sent successfully");
-    // try {
-    //   setIsLoading(true);
-    //   await sendMessage(values);
-    //   toast.success("Message sent successfully");
-    //   form.reset();
-    // } catch (error) {
-    //   console.log(error);
-    //   toast.error("Something went wrong");
-    // } finally {
-    //   setIsLoading(false);
-    // }
+    try {
+      setIsLoading(true);
+      await sendMessage(values);
+      toast.success("Message sent successfully");
+      form.reset();
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    } finally {
+      setIsLoading(false);
+    }
   }
   return (
     <Dialog open={useModal.isOpen} onOpenChange={useModal.onClose}>

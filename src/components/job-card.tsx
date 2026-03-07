@@ -13,7 +13,7 @@ export default function JobCard({ data }: { data: JobCardProps }) {
     <a
       href={data.link}
       target="_blank"
-      className="flex w-full items-center justify-between rounded-md bg-[#202022] p-4 hover:bg-[#202022]/65 sm:p-5"
+      className="flex w-full items-center justify-between rounded-md border border-zinc-800 bg-[#202022] p-4 hover:bg-[#202022]/65 sm:p-5"
     >
       <div className="flex items-center gap-x-7">
         <div className="relative hidden h-9 w-9 overflow-hidden rounded-full sm:flex">
