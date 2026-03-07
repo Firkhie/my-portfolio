@@ -18,24 +18,31 @@ export default function ProjectCard({
   links,
 }: ProjectCardProps) {
   return (
-    <div className="flex h-[350px] w-full flex-col gap-y-2 rounded-md bg-[#202022] p-4 sm:h-[400px] sm:px-6 sm:py-5">
-      <div className="relative h-full w-full overflow-hidden rounded-md">
+    <div className="flex w-full flex-col overflow-hidden rounded-md border border-zinc-800 bg-[#202022]">
+      {/* Image */}
+      <div className="relative h-52">
         <Image
           alt="Image"
           src={image}
           fill
-          className="object-cover object-top"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover object-center"
         />
       </div>
-      <h3 className="mt-2 text-sm font-semibold sm:mt-4 sm:text-base">
-        {name}
-      </h3>
-      <p className="text-xs text-zinc-400 sm:text-sm">{description}</p>
-      <div className="flex gap-x-3">
-        {links &&
-          links.map((link, index) => (
+
+      {/* Content */}
+      <div className="flex flex-col gap-y-2 p-4">
+        <h3 className="text-sm font-semibold sm:text-base">{name}</h3>
+
+        <p className="line-clamp-2 text-xs text-zinc-400 sm:text-sm">
+          {description}
+        </p>
+
+        <div className="flex gap-x-3">
+          {links?.map((link, index) => (
             <RedirectLink key={index} name={link.name} url={link.url} />
           ))}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,32 @@
+{
+  "languages": [
+    { "name": "JavaScript", "icon": "js" },
+    { "name": "TypeScript", "icon": "typescript" },
+    { "name": "Python", "icon": "python" }
+  ],
+  "frontend": [
+    { "name": "React", "icon": "react" },
+    { "name": "Next.js", "icon": "nextjs" },
+    { "name": "React Native", "icon": "react" },
+    { "name": "Expo", "icon": "expo" },
+    { "name": "Tailwind CSS", "icon": "tailwindcss" }
+  ],
+  "backend": [
+    { "name": "Node.js", "icon": "nodejs" },
+    { "name": "Express.js", "icon": "expressjs" }
+  ],
+  "database": [
+    { "name": "PostgreSQL", "icon": "postgresql" },
+    { "name": "Prisma", "icon": "prisma" },
+    { "name": "Sequelize", "icon": "sequelize" },
+    { "name": "Supabase", "icon": "supabase" },
+    { "name": "Neon", "icon": "neon" }
+  ],
+  "devops": [
+    { "name": "Docker", "icon": "docker" },
+    { "name": "Git", "icon": "git" },
+    { "name": "GitHub", "icon": "github" },
+    { "name": "Vercel", "icon": "vercel" },
+    { "name": "AWS EC2", "icon": "aws" }
+  ]
+}

@@ -22,10 +22,6 @@
       {
         "name": "Github",
         "url": "https://github.com/Firkhie/overture-ai"
-      },
-      {
-        "name": "Website",
-        "url": "https://overtureai.catco.uno/"
       }
     ]
   },
@@ -37,10 +33,39 @@
       {
         "name": "Github",
         "url": "https://github.com/Firkhie/snack-whiz.git"
-      },
+      }
+    ]
+  },
+  {
+    "image": "/pokedex.png",
+    "name": "Pokedex",
+    "description": "Comprehensive and interactive encyclopedia of Pokémon using PokeAPI.",
+    "links": [
       {
-        "name": "Website",
-        "url": "https://snackwhiz.catco.uno/"
+        "name": "Github",
+        "url": "https://github.com/Firkhie/pokedex"
+      }
+    ]
+  },
+  {
+    "image": "/repo-explorer.png",
+    "name": "RepoExplorer",
+    "description": "A GitHub repository search tool powered by the GitHub REST API.",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Firkhie/repo-explorer"
+      }
+    ]
+  },
+  {
+    "image": "/nekomics.png",
+    "name": "Nekomics",
+    "description": "Comic reading website using MangaDex API V2.",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/Firkhie/nekomics-app"
       }
     ]
   }
