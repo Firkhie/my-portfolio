@@ -100,22 +100,6 @@ export default function HomeRightSide() {
         ))}
       </div>
       {/* Tech Stack */}
-      {/* <div id="tech-stack" className="flex flex-col gap-4">
-        <hr className="border-zinc-600" />
-        <h2 id="tech-stack-3" className="text-lg font-semibold sm:text-xl">
-          Tech Stack
-        </h2>
-
-        {techCategories.map((category) => (
-          <TechCategory
-            key={category.key}
-            title={category.title}
-            icon={category.icon}
-            items={techStack[category.key]}
-          />
-        ))}
-      </div> */}
-      {/* Tech Stack */}
       <div id="tech-stack" className="flex flex-col gap-4">
         <hr className="border-zinc-600" />
         <h2 id="tech-stack-3" className="text-lg font-semibold sm:text-xl">
@@ -149,7 +133,7 @@ export default function HomeRightSide() {
         ))}
       </div>
       {/* Footer */}
-      <div className="space-y-2">
+      <div className="mt-7 space-y-2 lg:mt-0">
         <p className="text-center text-xs text-zinc-500">
           Design inspired by{" "}
           <a
