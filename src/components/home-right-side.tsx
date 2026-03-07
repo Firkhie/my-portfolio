@@ -153,7 +153,7 @@ export default function HomeRightSide() {
           </a>
         </p>
         <p className="text-center text-xs text-zinc-500">
-          © 2024 Firdig Alfalakhi. All Rights Reserved.
+          © 2026 Firdig Alfalakhi. All Rights Reserved.
         </p>
       </div>
     </div>

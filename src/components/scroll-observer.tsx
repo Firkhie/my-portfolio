@@ -11,13 +11,15 @@ export default function ScrollObserver({ onChange }: ScrollObserverProps) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const textContent = entry.target.textContent || "";
+          const target = entry.target as HTMLElement;
+          const textContent = target.textContent || "";
+
           if (!textContentsRef.current.includes(textContent)) {
             textContentsRef.current.push(textContent);
           }
 
           if (!entry.isIntersecting && entry.boundingClientRect.top <= 64) {
-            onChange(entry.target.textContent || "");
+            onChange(textContent);
           } else if (
             entry.isIntersecting &&
             entry.boundingClientRect.top <= 64
@@ -33,6 +35,7 @@ export default function ScrollObserver({ onChange }: ScrollObserverProps) {
       },
       {
         rootMargin: "-64px 0px 0px 0px",
+        threshold: 0,
       },
     );
 
