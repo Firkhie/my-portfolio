@@ -20,7 +20,7 @@ export default function ProjectCard({
   return (
     <div className="flex w-full flex-col overflow-hidden rounded-md border border-zinc-800 bg-[#202022]">
       {/* Image */}
-      <div className="relative h-52">
+      <div className="relative h-40 sm:h-48 lg:h-52">
         <Image
           alt="Image"
           src={image}
