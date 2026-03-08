@@ -6,7 +6,6 @@ interface ScrollObserverProps {
 
 export default function ScrollObserver({ onChange }: ScrollObserverProps) {
   useEffect(() => {
-    // Ambil semua section, misal h2
     const sections = Array.from(
       document.querySelectorAll("h2"),
     ) as HTMLElement[];

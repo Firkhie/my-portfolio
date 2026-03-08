@@ -133,7 +133,7 @@ export default function HomeRightSide() {
         ))}
       </div>
       {/* Footer */}
-      <div className="mt-7 space-y-2 lg:mt-0">
+      <div className="mt-4 space-y-2 lg:mt-0">
         <p className="text-center text-xs text-zinc-500">
           Design inspired by{" "}
           <a
