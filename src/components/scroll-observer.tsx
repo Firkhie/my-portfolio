@@ -1,51 +1,37 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface ScrollObserverProps {
   onChange: (heading: string) => void;
 }
 
 export default function ScrollObserver({ onChange }: ScrollObserverProps) {
-  const textContentsRef = useRef<string[]>([]);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const target = entry.target as HTMLElement;
-          const textContent = target.textContent || "";
+    // Ambil semua section, misal h2
+    const sections = Array.from(
+      document.querySelectorAll("h2"),
+    ) as HTMLElement[];
 
-          if (!textContentsRef.current.includes(textContent)) {
-            textContentsRef.current.push(textContent);
-          }
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const navbarOffset = 64;
 
-          if (!entry.isIntersecting && entry.boundingClientRect.top <= 64) {
-            onChange(textContent);
-          } else if (
-            entry.isIntersecting &&
-            entry.boundingClientRect.top <= 64
-          ) {
-            const index = textContentsRef.current.indexOf(textContent) - 1;
-            if (index >= 0) {
-              onChange(textContentsRef.current[index] || "");
-            } else {
-              onChange("");
-            }
-          }
-        });
-      },
-      {
-        rootMargin: "-64px 0px 0px 0px",
-        threshold: 0,
-      },
-    );
+      let current = "";
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const top = sections[i].offsetTop - navbarOffset;
+        if (scrollY >= top) {
+          current = sections[i].textContent || "";
+          break;
+        }
+      }
 
-    const headings = document.querySelectorAll("h2");
-    headings.forEach((heading) => {
-      observer.observe(heading);
-    });
+      onChange(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [onChange]);
 
