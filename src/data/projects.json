@@ -2,7 +2,7 @@
   {
     "image": "/anistream.png",
     "name": "Anistream",
-    "description": "Anime streaming website featuring a modern interface and a wide selection of titles for all anime fans.",
+    "description": "Anime streaming website featuring a modern interface, custom video player, and API proxying. Actively maintained.",
     "links": [
       {
         "name": "Github",
@@ -11,61 +11,6 @@
       {
         "name": "Website",
         "url": "https://anistream.catco.uno/"
-      }
-    ]
-  },
-  {
-    "image": "/overture-ai.png",
-    "name": "OvertureAI",
-    "description": "A SaaS AI platform offering conversation, code, music, image, and video generation, with subscription features.",
-    "links": [
-      {
-        "name": "Github",
-        "url": "https://github.com/Firkhie/overture-ai"
-      }
-    ]
-  },
-  {
-    "image": "/snack-whiz.png",
-    "name": "SnackWhiz",
-    "description": "AI-powered website that automatically generates and updates unique snack recipes weekly.",
-    "links": [
-      {
-        "name": "Github",
-        "url": "https://github.com/Firkhie/snack-whiz.git"
-      }
-    ]
-  },
-  {
-    "image": "/pokedex.png",
-    "name": "Pokedex",
-    "description": "Comprehensive and interactive encyclopedia of Pokémon using PokeAPI.",
-    "links": [
-      {
-        "name": "Github",
-        "url": "https://github.com/Firkhie/pokedex"
-      }
-    ]
-  },
-  {
-    "image": "/repo-explorer.png",
-    "name": "RepoExplorer",
-    "description": "A GitHub repository search tool powered by the GitHub REST API.",
-    "links": [
-      {
-        "name": "Github",
-        "url": "https://github.com/Firkhie/repo-explorer"
-      }
-    ]
-  },
-  {
-    "image": "/nekomics.png",
-    "name": "Nekomics",
-    "description": "Comic reading website using MangaDex API V2.",
-    "links": [
-      {
-        "name": "Github",
-        "url": "https://github.com/Firkhie/nekomics-app"
       }
     ]
   }

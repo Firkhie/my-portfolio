@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./project-card";
 import JobCard from "./job-card";
-import TechCategory from "./tech-category";
 import ContactDialog from "./contact-dialog";
 import { useModalStore } from "@/hooks/use-modal-store";
 import { useEffect, useState } from "react";
@@ -32,7 +31,7 @@ const techCategories: TechCategory[] = [
   },
   {
     key: "frontend",
-    title: "Frontend",
+    title: "Frontend & Mobile",
     icon: Layout,
   },
   {
@@ -47,7 +46,7 @@ const techCategories: TechCategory[] = [
   },
   {
     key: "devops",
-    title: "DevOps",
+    title: "DevOps & Cloud",
     icon: Cloud,
   },
 ];
@@ -66,9 +65,10 @@ export default function HomeRightSide() {
   return (
     <div className="mt-10 flex h-full w-full flex-col gap-y-8 sm:mt-14 sm:gap-y-14 lg:mt-0">
       <ScrollObserver onChange={setCurrentHeading} />
+
       {/* Header */}
       <div className="flex flex-col gap-4 sm:gap-7">
-        <h1 className="text-2xl font-extralight sm:text-4xl">
+        <h1 className="text-2xl font-extralight text-zinc-100 sm:text-4xl">
           Open for collaboration and new opportunities
         </h1>
         <div className="flex gap-x-3">
@@ -79,19 +79,21 @@ export default function HomeRightSide() {
           <a
             href="https://drive.google.com/file/d/1HOxWB6UIrA2ZJy3YVgImINlVSW_36RBW/view?usp=sharing"
             target="_blank"
+            rel="noreferrer"
           >
             <Button size="custom" variant="custom">
-              Download CV
+              View CV
             </Button>
           </a>
         </div>
       </div>
+
       {/* Working Experience */}
       <div className="flex flex-col gap-4">
-        <hr className="border-zinc-600" />
+        <hr className="border-zinc-800" />
         <h2
           id="working-experience"
-          className="text-lg font-semibold sm:text-xl"
+          className="text-lg font-semibold text-zinc-100 sm:text-xl"
         >
           Working Experience
         </h2>
@@ -99,27 +101,37 @@ export default function HomeRightSide() {
           <JobCard key={job.place} data={job} />
         ))}
       </div>
+
       {/* Tech Stack */}
-      <div id="tech-stack" className="flex flex-col gap-4">
-        <hr className="border-zinc-600" />
-        <h2 id="tech-stack-3" className="text-lg font-semibold sm:text-xl">
+      <div className="flex flex-col gap-4">
+        <hr className="border-zinc-800" />
+        <h2
+          id="tech-stack"
+          className="text-lg font-semibold text-zinc-100 sm:text-xl"
+        >
           Tech Stack
         </h2>
 
-        {techCategories.map((category) => (
-          <TechBadgeCategory
-            key={category.key}
-            title={category.title}
-            icon={category.icon}
-            items={techStack[category.key]}
-          />
-        ))}
+        <div className="flex flex-col gap-4">
+          {techCategories.map((category) => (
+            <TechBadgeCategory
+              key={category.key}
+              title={category.title}
+              icon={category.icon}
+              items={techStack[category.key]}
+            />
+          ))}
+        </div>
       </div>
-      {/* Latest Projects */}
+
+      {/* Featured Project */}
       <div className="flex flex-col gap-4">
-        <hr className="border-zinc-600" />
-        <h2 id="latest-projects" className="text-lg font-semibold sm:text-xl">
-          Latest Projects
+        <hr className="border-zinc-800" />
+        <h2
+          id="featured-project"
+          className="text-lg font-semibold text-zinc-100 sm:text-xl"
+        >
+          Featured Project
         </h2>
 
         {projects.map((project) => (
@@ -132,6 +144,7 @@ export default function HomeRightSide() {
           />
         ))}
       </div>
+
       {/* Footer */}
       <div className="mt-4 space-y-2 lg:mt-0">
         <p className="text-center text-xs text-zinc-500">
@@ -139,6 +152,7 @@ export default function HomeRightSide() {
           <a
             href="https://dribbble.com/syahrulfalah"
             target="_blank"
+            rel="noreferrer"
             className="text-zinc-400"
           >
             Syahrul Falah
@@ -147,6 +161,7 @@ export default function HomeRightSide() {
           <a
             href="https://dribbble.com/NicolasMzrd"
             target="_blank"
+            rel="noreferrer"
             className="text-zinc-400"
           >
             Nicolas Meuzard

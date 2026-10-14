@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useModalStore } from "@/hooks/use-modal-store";
 import { sendMessage } from "@/lib/send-message";
 import toast from "react-hot-toast";
@@ -66,116 +66,141 @@ export default function ContactDialog() {
       await sendMessage(values);
       toast.success("Message sent successfully");
       form.reset();
+      useModal.onClose();
     } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
+      console.error(error);
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
     }
   }
+
+  const inputClass =
+    "rounded-lg border border-zinc-800 bg-[#202022] px-3.5 py-2.5 text-xs text-zinc-100 placeholder:text-zinc-500 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 sm:text-sm";
+
   return (
     <Dialog open={useModal.isOpen} onOpenChange={useModal.onClose}>
-      <DialogContent className="h-fit w-full border-[#151415] bg-[#151415] text-[#ffffff]">
-        <DialogHeader>
-          <DialogTitle className="mb-5 text-base font-bold sm:text-xl">
+      <DialogContent className="max-w-lg rounded-xl border border-zinc-800 bg-[#161618] p-6 text-zinc-100 shadow-2xl sm:rounded-xl sm:p-7">
+        <DialogHeader className="space-y-1.5 text-left">
+          <DialogTitle className="text-lg font-semibold sm:text-xl">
             Send a message
           </DialogTitle>
-          <DialogDescription className="text-[#ffffff]">
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-2 sm:space-y-4"
-              >
-                <div className="flex gap-x-3">
-                  <FormField
-                    control={form.control}
-                    name="fullname"
-                    render={({ field }) => (
-                      <FormItem className="flex-1">
-                        <FormLabel className="text-xs sm:text-sm">
-                          Fullname
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Your fullname"
-                            {...field}
-                            className="text-xs text-black focus-visible:ring-0 focus-visible:ring-transparent sm:text-sm"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem className="flex-1">
-                        <FormLabel className="text-xs sm:text-sm">
-                          Email
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Your email"
-                            {...field}
-                            className="text-xs text-black focus-visible:ring-0 focus-visible:ring-transparent sm:text-sm"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs sm:text-sm">
-                        Subject
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Your subject"
-                          {...field}
-                          className="text-xs text-black focus-visible:ring-0 focus-visible:ring-transparent sm:text-sm"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs sm:text-sm">
-                        Message
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Your message"
-                          {...field}
-                          className="text-xs text-black focus-visible:ring-0 focus-visible:ring-transparent sm:text-sm"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button
-                  type="submit"
-                  className="flex gap-x-2 bg-[#2d2c2d] text-xs hover:bg-[#2d2c2d]/70 sm:text-sm"
-                  disabled={isLoading}
-                >
-                  <Send className="h-[14px] w-[14px] sm:h-4 sm:w-4" />
-                  Send Message
-                </Button>
-              </form>
-            </Form>
+          <DialogDescription className="text-xs text-zinc-400 sm:text-sm">
+            Feel free to reach out for collaborations, questions, or opportunities.
           </DialogDescription>
         </DialogHeader>
+
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="mt-2 space-y-3.5 sm:space-y-4"
+          >
+            <div className="flex flex-col gap-3.5 sm:flex-row sm:gap-3">
+              <FormField
+                control={form.control}
+                name="fullname"
+                render={({ field }) => (
+                  <FormItem className="flex-1 space-y-1.5">
+                    <FormLabel className="text-xs font-medium text-zinc-300 sm:text-sm">
+                      Fullname
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Your name"
+                        {...field}
+                        className={inputClass}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs text-red-400" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="flex-1 space-y-1.5">
+                    <FormLabel className="text-xs font-medium text-zinc-300 sm:text-sm">
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        {...field}
+                        className={inputClass}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs text-red-400" />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <FormField
+              control={form.control}
+              name="subject"
+              render={({ field }) => (
+                <FormItem className="space-y-1.5">
+                  <FormLabel className="text-xs font-medium text-zinc-300 sm:text-sm">
+                    Subject
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="What is this about?"
+                      {...field}
+                      className={inputClass}
+                    />
+                  </FormControl>
+                  <FormMessage className="text-xs text-red-400" />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem className="space-y-1.5">
+                  <FormLabel className="text-xs font-medium text-zinc-300 sm:text-sm">
+                    Message
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Write your message here..."
+                      {...field}
+                      rows={4}
+                      className="min-h-[100px] resize-none rounded-lg border border-zinc-800 bg-[#202022] p-3.5 text-xs text-zinc-100 placeholder:text-zinc-500 transition-colors focus:border-zinc-600 focus:outline-none focus:ring-0 sm:text-sm"
+                    />
+                  </FormControl>
+                  <FormMessage className="text-xs text-red-400" />
+                </FormItem>
+              )}
+            />
+
+            <div className="pt-2">
+              <Button
+                type="submit"
+                disabled={isLoading}
+                variant="custom"
+                size="custom"
+                className="flex w-full items-center justify-center gap-x-2 sm:w-auto"
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    <span>Send Message</span>
+                  </>
+                )}
+              </Button>
+            </div>
+          </form>
+        </Form>
       </DialogContent>
     </Dialog>
   );

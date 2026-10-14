@@ -15,19 +15,21 @@ export default function TechBadgeCategory({
   items: Tech[];
 }) {
   return (
-    <div className="flex flex-col gap-4 rounded-md border border-zinc-800 bg-[#202022] p-4">
+    <div className="flex flex-col gap-3.5 rounded-xl border border-zinc-800 bg-[#202022] p-4 sm:p-5">
       <div className="flex items-center gap-2">
-        <div className="rounded-lg bg-zinc-700 p-2 text-xs font-medium text-zinc-200">
+        <div className="rounded-lg border border-zinc-700/50 bg-zinc-800 p-2 text-xs font-medium text-zinc-300">
           <Icon size={15} />
         </div>
-        <h3 className="text-base font-medium">{title}</h3>
+        <h3 className="text-sm font-medium text-zinc-200 sm:text-base">
+          {title}
+        </h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
         {items.map((tech) => (
           <span
             key={tech.name}
-            className="flex items-center gap-1.5 rounded-md bg-zinc-700 px-3 py-1 text-xs font-medium text-zinc-200"
+            className="flex items-center gap-1.5 rounded-md border border-zinc-700/40 bg-zinc-800/80 px-2.5 py-1 text-xs font-medium text-zinc-300"
           >
             <div className="flex h-3 w-3 items-center justify-center">
               <StackIcon name={tech.icon} variant="dark" />

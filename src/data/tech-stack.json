@@ -1,32 +1,32 @@
 {
   "languages": [
-    { "name": "JavaScript", "icon": "js" },
     { "name": "TypeScript", "icon": "typescript" },
+    { "name": "JavaScript", "icon": "js" },
     { "name": "Python", "icon": "python" }
   ],
   "frontend": [
-    { "name": "React", "icon": "react" },
     { "name": "Next.js", "icon": "nextjs" },
+    { "name": "React", "icon": "react" },
     { "name": "React Native", "icon": "react" },
-    { "name": "Expo", "icon": "expo" },
-    { "name": "Tailwind CSS", "icon": "tailwindcss" }
+    { "name": "Expo", "icon": "expo" }
   ],
   "backend": [
     { "name": "Node.js", "icon": "nodejs" },
-    { "name": "Express.js", "icon": "expressjs" }
+    { "name": "Express.js", "icon": "expressjs" },
+    { "name": "Flask", "icon": "flask" },
+    { "name": "Odoo ERP", "icon": "python" }
   ],
   "database": [
     { "name": "PostgreSQL", "icon": "postgresql" },
     { "name": "Prisma", "icon": "prisma" },
-    { "name": "Sequelize", "icon": "sequelize" },
-    { "name": "Supabase", "icon": "supabase" },
-    { "name": "Neon", "icon": "neon" }
+    { "name": "Supabase", "icon": "supabase" }
   ],
   "devops": [
     { "name": "Docker", "icon": "docker" },
-    { "name": "Git", "icon": "git" },
-    { "name": "GitHub", "icon": "github" },
-    { "name": "Vercel", "icon": "vercel" },
-    { "name": "AWS EC2", "icon": "aws" }
+    { "name": "Nginx", "icon": "nginx" },
+    { "name": "GitHub Actions", "icon": "github" },
+    { "name": "DigitalOcean", "icon": "digitalocean" },
+    { "name": "AWS EC2", "icon": "aws" },
+    { "name": "Git", "icon": "git" }
   ]
 }
