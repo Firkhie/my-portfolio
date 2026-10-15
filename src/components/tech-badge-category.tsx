@@ -1,3 +1,4 @@
+import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 
 type Tech = {
@@ -31,9 +32,19 @@ export default function TechBadgeCategory({
             key={tech.name}
             className="flex items-center gap-1.5 rounded-md border border-zinc-700/40 bg-zinc-800/80 px-2.5 py-1 text-xs font-medium text-zinc-300"
           >
-            <div className="flex h-3 w-3 items-center justify-center">
-              <StackIcon name={tech.icon} variant="dark" />
-            </div>
+            <div className="flex h-3 w-3 items-center justify-center overflow-hidden">
+              {tech.icon === "jenkins" ? (
+                <Image
+                  src="/jenkins.svg"
+                  alt="Jenkins"
+                  width={12}
+                  height={12}
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <StackIcon name={tech.icon} variant="dark" />
+              )}
+              </div>
             {tech.name}
           </span>
         ))}

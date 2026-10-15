@@ -8,6 +8,7 @@
     { "name": "Next.js", "icon": "nextjs" },
     { "name": "React", "icon": "react" },
     { "name": "React Native", "icon": "react" },
+    { "name": "Vue", "icon": "vuejs" },
     { "name": "Expo", "icon": "expo" }
   ],
   "backend": [
@@ -18,6 +19,7 @@
   ],
   "database": [
     { "name": "PostgreSQL", "icon": "postgresql" },
+    { "name": "SQLite", "icon": "sqlite" },
     { "name": "Prisma", "icon": "prisma" },
     { "name": "Supabase", "icon": "supabase" }
   ],
@@ -25,8 +27,9 @@
     { "name": "Docker", "icon": "docker" },
     { "name": "Nginx", "icon": "nginx" },
     { "name": "GitHub Actions", "icon": "github" },
+    { "name": "Jenkins", "icon": "jenkins" },
     { "name": "DigitalOcean", "icon": "digitalocean" },
-    { "name": "AWS EC2", "icon": "aws" },
-    { "name": "Git", "icon": "git" }
+    { "name": "Render", "icon": "render" },
+    { "name": "AWS EC2", "icon": "aws" }
   ]
 }
